@@ -24,6 +24,7 @@ namespace ALL_Dot_Net_Helper.Controllers
                 HttpResponseMessage response = await client.GetAsync(path);
                 if (response.IsSuccessStatusCode)
                 {
+
                     product = await response.Content.ReadAsStringAsync();//<string>();
                 }
                 return Ok(product);
